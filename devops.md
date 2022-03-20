@@ -1,16 +1,3 @@
-## Github经常打不开，或者打开特别慢，怎么办？
-- 何解：找到官网IP地址、域名IP地址、静态资源地址，然后配置本机hosts文件，刷新DNS缓存即可
-```
-1.获取github最新IP地址
-  https://ipaddress.com/website/github.com
-  https://fastly.net.ipaddress.com/github.global.ssl.fastly.net
-  https://github.com.ipaddress.com/assets-cdn.github.com
-2.修改hosts文件，添加ip和域名：
-  C:\Windows\System32\drivers\etc中的hosts文件
-3.刷新DNS缓存
-  打开cmd窗口，执行ipconfig /flushdns命令
-```
-
 ## Linux中正则匹配的妙用
 - 大量数据分批删除（文件上万个+）
 ```
@@ -39,11 +26,21 @@
 ### 1.快速启动web服务
 - python3启动web服务
 ```
+标准启动模式：
 python -m http.server 8000
+后台启动模式：
+nohup python -m http.server 8000 &
+指定日志文件启动模式：
+nohup python -m http.server 8000 >> test.log 2>&1 &
 ```
 - python2启动web服务
 ```
+标准启动模式：
 python -m SimpleHTTPServer 8000
+后台启动模式：
+nohup python -m SimpleHTTPServer 8000 &
+指定日志文件启动模式：
+nohup python -m http.server 8000 >> test.log 2>&1 &
 ```
 ### 2.本地启动html格式
 ```
