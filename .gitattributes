@@ -1,5 +1,1 @@
-*.md linguist-language=shell
 *.md linguist-language=python
-*.md linguist-language=sql
-*.md linguist-language=db
-*.md linguist-language=linux
