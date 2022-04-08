@@ -6,22 +6,50 @@ skill in a word 一点就通，大道至简！
 ### 下载中文版统计年签 :+1::+1::+1:
 - 2005~2021年
 ```
-wget http://www.stats.gov.cn/tjsj/ndsj/2021/left.htm|xargs cat left.htm|grep href|grep html|awk -F "'" '{print " http://www.stats.gov.cn/tjsj/ndsj/2021/"$2}'|grep -E '.jpg|.htm'|xargs wget 
+wget http://www.stats.gov.cn/tjsj/ndsj/2021/left.htm|
+xargs cat left.htm|
+grep href|grep html|
+awk -F "'" '{print " http://www.stats.gov.cn/tjsj/ndsj/2021/"$2}'|
+grep -E '.jpg|.htm'|
+xargs wget 
 ```
 ### 下载英文版统计年签 :+1::+1::+1:
 - 2007~2021年
 ```
-wget http://www.stats.gov.cn/tjsj/ndsj/2021/left_.htm|xargs cat left_.htm|grep href|grep html|awk -F "'" '{print " http://www.stats.gov.cn/tjsj/ndsj/2021/"$2}'|grep -E '.jpg|.htm'|xargs wget 
+wget http://www.stats.gov.cn/tjsj/ndsj/2021/left_.htm|
+xargs cat left_.htm|
+grep href|
+grep html|
+awk -F "'" '{print " http://www.stats.gov.cn/tjsj/ndsj/2021/"$2}'|
+grep -E '.jpg|.htm'|
+xargs wget 
 ```
 ### 下载统计公报 :+1::+1::+1:
 - 2013~2021年
 ```
-wget http://www.stats.gov.cn/tjsj/tjgb/ndtjgb/index.html|xargs cat index.html |grep -E "t202|t201[4-9]"|grep "cont_tit"|awk -F '"' '{print "http://www.stats.gov.cn/"$2}'|xargs wget
+wget http://www.stats.gov.cn/tjsj/tjgb/ndtjgb/index.html|
+xargs cat index.html |
+grep -E "t202|
+t201[4-9]"|
+grep "cont_tit"|
+awk -F '"' '{print "http://www.stats.gov.cn/"$2}'|
+xargs wget
 ```
 ### 中国互联网络发展状况统计报告
 - 下载第39~48次《中国互联网络发展状况统计报告》
 ```
-wget http://www.cnnic.net.cn/hlwfzyj/hlwxzbg/index.htm|cat index.htm |grep "次"|grep pdf|awk -F "</a>" '{print $1}'|awk -F "=" '{print " http://www.cnnic.net.cn/hlwfzyj/hlwxzbg "$3}'|sed 's/target//g'|sed 's/"_blank">//g'|awk -F "'" '{print $1$2}'|sed 's/ //g'|sed 's/hlwxzbg./hlwxzbg/g'|xargs wget -c  
+wget http://www.cnnic.net.cn/hlwfzyj/hlwxzbg/index.htm|
+cat index.htm |
+grep "次"|
+grep pdf|
+awk -F "</a>" '{print $1}'|
+awk -F "=" '{print " http://www.cnnic.net.cn/hlwfzyj/hlwxzbg "$3}'|
+sed 's/target//g'|
+sed 's/"_blank">//g'|
+awk -F "'" '{print $1$2}'|
+sed 's/ //g'|
+sed 's/hlwxzbg./hlwxzbg/g'|
+xargs wget -c  
 ```
 ***
 ## 实用一点通
